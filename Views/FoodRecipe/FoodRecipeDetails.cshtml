@@ -1,0 +1,36 @@
+﻿@model List<FoodRecipeDto>
+
+
+
+@{
+    ViewData["Title"] = "FoodRecipeList";
+}
+
+<div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+    <h2 class="section-title py-5">En Lezzetli Yemekler Burada</h2>
+
+    @foreach (var item in Model)
+    {
+     
+        <div id="about" class="container-fluid wow fadeIn" id="about" data-wow-duration="1.5s">
+            <div class="row">
+                <div class="col-lg-6"> <img src="@item.ImageUrl" /> </div>
+                <div class="col-lg-6">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-8 py-5 my-5">
+                            <h2 class="mb-4">@item.Name</h2>
+                            <p>
+                                @item.FoodMaterial
+                            </p>
+                            <p><b>@item.FoodPreparation xplicabo vitae. Cum, nostrum, quidem.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+

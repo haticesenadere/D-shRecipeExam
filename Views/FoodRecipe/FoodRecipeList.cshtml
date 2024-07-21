@@ -1,0 +1,37 @@
+﻿@model List<FoodRecipeDto>
+
+
+
+@{
+    ViewData["Title"] = "FoodRecipeList";
+}
+
+<div id="blog" class="container-fluid bg-dark text-light py-5 text-center wow fadeIn">
+    <h2 class="section-title py-5">En Lezzetli Yemekler Burada</h2>
+    
+    @foreach ( var item in Model)
+    {
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="foods" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card bg-transparent border my-3 my-md-0">
+                        <img src="@item.ImageUrl" alt="template by DevCRID http://www.devcrud.com/" class="rounded-0 card-img-top mg-responsive">
+                        <div class="card-body">
+                            <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">@item.Name</a></h1>
+                            <h4 class="pt20 pb20">@item.FoodMaterial </h4>
+                            <p class="text-white">@item.FoodPreparation </p>
+                        </div>
+                    </div>
+                        <a href="/FoodRecipe/UpdateFoodRecipe/@item.Id" class="btn btn-primary"> Güncelle </a>
+                        <a href="/FoodRecipe/DeleteFoodRecipe/@item.Id" class="btn btn-primary"> Sil </a>
+                </div>
+               
+    </div>
+                
+</div>
+
+</div>
+
+}
+</div

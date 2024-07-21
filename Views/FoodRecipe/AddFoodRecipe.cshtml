@@ -1,0 +1,44 @@
+﻿@model FoodRecipeDto
+@{
+    ViewData["Title"] = "AddFoodRecipe";
+}
+
+<h1>Yemek Tariflerini Ekle </h1>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+<form asp-action="AddFoodRecipe" method="post" enctype="multipart/form-data">
+<div class="container-fluid has-bg-overlay text-center text-light has-height-lg middle-items" id="book-table">
+    <div class="">
+
+            <div class="row mb-5">
+
+
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2 d-flex align-items-center">
+                    <h2 class="section-title mb-5">Tarif Ekle</h2>
+                    <input type="text" id="booktable" class="form-control  custom-form-control" asp-for="Name">
+            </div>
+              
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2 d-flex align-items-center">
+                    <h2 class="section-title mb-5">Malzeme Ekle</h2>
+                    <input type="text" id="booktable" class="form-control custom-form-control" asp-for="FoodMaterial">
+            </div>
+
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2 d-flex align-items-center">
+                    <h2 class="section-title mb-5">Yapılışını  Ekle</h2>
+                    <input type="text" id="booktable" class="form-control  custom-form-control" asp-for="FoodPreparation">
+            </div>
+              
+                <div class="col-sm-6 col-md-3 col-xs-12 my-2 d-flex align-items-center">
+                    <h2 class="section-title mb-5">Dosya Ekle</h2>
+                    <input type="file" id="booktable" class="form-control s custom-form-control" asp-for="File">
+            </div>
+        </div>
+            <button type="submit" class="new-entry-link">Tarifi Ekle</button>
+    </div>
+</div>
+
+    </form>
